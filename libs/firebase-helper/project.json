@@ -1,6 +1,6 @@
 {
   "name": "firebase-helper",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "firebase-helper/src",
   "prefix": "spin-the-team",
   "tags": [],
