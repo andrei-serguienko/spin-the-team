@@ -29,6 +29,33 @@
           "firebase-helper/**/*.html"
         ]
       }
+    },
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "main": "libs/firebase-helper/src/index.ts",
+        "outputPath": "dist/libs/firebase-helper",
+        "outputFileName": "main.js",
+        "tsConfig": "libs/firebase-helper/tsconfig.lib.json",
+        "assets": [
+          {
+            "glob": "libs/firebase-helper/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "platform": "node"
+      },
+      "configurations": {
+        "development": {
+          "minify": false
+        },
+        "production": {
+          "minify": true
+        }
+      }
     }
   }
 }
