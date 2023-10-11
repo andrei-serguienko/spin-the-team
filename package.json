@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve --porject spin-the-team"
+    "start": "nx serve --project spin-the-team"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +23,7 @@
     "@ngxs/store": "^3.8.1",
     "@nx/angular": "16.10.0",
     "axios": "^1.0.0",
+    "firebase": "^10.4.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -54,6 +55,7 @@
     "@types/node": "~18.7.1",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
+    "esbuild": "^0.17.17",
     "eslint": "~8.46.0",
     "eslint-config-prettier": "8.1.0",
     "jest": "^29.4.1",
