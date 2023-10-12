@@ -16,11 +16,12 @@
     "baseUrl": ".",
     "paths": {
       "@spin-the-team/firebase-helper": ["libs/firebase-helper/src/index.ts"],
+      "@spin-the-team/tools": ["libs/tools/src/index.ts"],
       "@spin-the-team/libs/participant-list": [
         "libs/participant-list/src/index.ts"
       ],
+      "@spin-the-team/store": ["libs/store/src/index.ts"],
       "@spin-the-team/models": ["libs/models/src/index.ts"],
-      "@spin-the-team/store": ["libs/store/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

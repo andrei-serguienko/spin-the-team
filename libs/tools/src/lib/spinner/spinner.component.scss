@@ -1,0 +1,36 @@
+.spinner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+}
+
+.spinner__item {
+  position: relative;
+  display: flex;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 0.5rem;
+  transition: all 2s ease !important;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.spinner__item.hasWin {
+  animation: winAnim 2s 2;
+}
+
+@keyframes winAnim {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transform: scale(1);
+  }
+  10%, 30%, 50%, 70% {
+    transform: scale(1.5);
+  }
+}
+
