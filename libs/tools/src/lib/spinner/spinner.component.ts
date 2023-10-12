@@ -8,11 +8,12 @@ import {
   keyframes,
 } from '@angular/animations';
 import { User } from '@spin-the-team/models';
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'spin-the-team-spinner',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatButtonModule],
   templateUrl: './spinner.component.html',
   styleUrls: ['./spinner.component.scss'],
   animations: [

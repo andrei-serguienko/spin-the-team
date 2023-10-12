@@ -1,10 +1,15 @@
-<div class="spinner">
-  <div class="spinner__item" *ngFor="let member of team; let i = index" [style]="{
+<div class="container_spinner">
+  <div class="spinner">
+    <div class="spinner__item" *ngFor="let member of team; let i = index" [style]="{
       display: getDisplayStatus(i),
     }"
-    [class.hasWin]="hasWin(i)"
-  >
-    <img [src]="member.img_url" alt="head"/>
+         [class.hasWin]="hasWin(i)"
+    >
+      <img [src]="member.img_url" alt="head"/>
+    </div>
+  </div>
+  <div class="button_container">
+    <button mat-raised-button color="accent">CHOOSE A DATE</button>
+    <button mat-raised-button color="primary" (click)="startSpinning()">START THE SPIN</button>
   </div>
 </div>
-<div (click)="startSpinning()">Start the spin</div>

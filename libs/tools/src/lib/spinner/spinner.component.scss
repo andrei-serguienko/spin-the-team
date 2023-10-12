@@ -1,3 +1,25 @@
+.container_spinner {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: red;
+  height: 30vh;
+  width: 50vw;
+  border-radius: 17px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #FFCE4F;
+}
+
 .spinner {
   display: flex;
   flex-direction: row;
