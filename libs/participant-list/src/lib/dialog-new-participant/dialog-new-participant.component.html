@@ -1,5 +1,5 @@
 <div>
-  <div mat-dialog-title>
+  <div class="title-2" mat-dialog-title>
     <span>Create a new member</span>
   </div>
   <mat-form-field>
@@ -12,6 +12,6 @@
   </mat-form-field>
 </div>
 <div>
-  <button mat-raised-button color="primary">Create</button>
-  <button mat-raised-button>Cancel</button>
+  <button mat-raised-button color="primary" (click)="submit()" [disabled]="!form.valid">Create</button>
+  <button mat-raised-button mat-dialog-close>Cancel</button>
 </div>
