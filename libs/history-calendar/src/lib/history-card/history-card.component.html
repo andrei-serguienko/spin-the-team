@@ -1,0 +1,17 @@
+<mat-card class="example-card">
+  <mat-card-header class="header">
+    <mat-card-title>{{history.name}}</mat-card-title>
+  </mat-card-header>
+  <div class="memberImg">
+    <img class="img" mat-card-image src="{{history.img_url}}" alt="Photo of a team ">
+  </div>
+  <mat-card-content style="text-align: center">
+    <p>
+      {{history.start_date | date}}
+    </p>
+    <p>
+      {{history.end_date | date}}
+    </p>
+
+  </mat-card-content>
+</mat-card>

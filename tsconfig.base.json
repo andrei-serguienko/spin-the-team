@@ -22,6 +22,7 @@
       ],
       "@spin-the-team/store": ["libs/store/src/index.ts"],
       "@spin-the-team/models": ["libs/models/src/index.ts"],
+      "@spin-the-team/history-calendar": ["libs/history-calendar/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
