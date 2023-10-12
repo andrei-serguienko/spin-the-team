@@ -1,0 +1,22 @@
+.img {
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  aspect-ratio:1/1;
+}
+.memberImg {
+  margin: 15%;
+  border-radius: 50%;
+  display: flex;
+  align-content: center;
+}
+
+.header{
+  justify-content: center;
+}
+
+mat-card {
+  border-radius: 20px;
+  margin: 2%;
+  background: #D9D9D9;
+}
