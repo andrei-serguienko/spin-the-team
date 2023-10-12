@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {HistoryRecordModel} from '../models/history-record.model';
 import {FirestoreUtils} from '../../common/firestore';
 import {map, Observable} from 'rxjs';
+import { HistoryRecordModel } from '@spin-the-team/models';
 
 @Injectable({
   providedIn: 'root'

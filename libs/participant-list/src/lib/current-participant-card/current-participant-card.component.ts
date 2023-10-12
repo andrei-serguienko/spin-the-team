@@ -3,7 +3,7 @@ import {CommonModule, NgIf} from '@angular/common';
 import {MatCardModule} from "@angular/material/card";
 import {HistoryService} from '@spin-the-team/firebase-helper';
 import {Observable} from "rxjs";
-import {HistoryRecordModel} from "../../../../firebase-helper/src/lib/history-record/models/history-record.model";
+import { HistoryRecordModel } from '@spin-the-team/models';
 
 @Component({
   selector: 'spin-the-team-participant-card',

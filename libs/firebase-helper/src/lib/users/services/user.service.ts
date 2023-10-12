@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FirestoreUtils } from '../../common/firestore';
-import {Observable, of} from 'rxjs';
+import { Observable } from 'rxjs';
+import { User } from '@spin-the-team/models';
 
 @Injectable({
   providedIn: 'root'

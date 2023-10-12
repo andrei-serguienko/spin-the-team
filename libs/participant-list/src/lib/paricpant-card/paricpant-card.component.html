@@ -1,9 +1,9 @@
-<mat-card class="background" [class]="isChecked ? '' : 'background-disabled'">
+<mat-card class="background" [class]="formControl.value ? '' : 'background-disabled'">
   <div class="avatar-background">
     <img [src]="image">
   </div>
   <div class="container-info">
     <span class="avatar-name">{{ name }}</span>
   </div>
-  <mat-slide-toggle [(ngModel)]="isChecked"></mat-slide-toggle>
+  <mat-slide-toggle [formControl]="formControl"></mat-slide-toggle>
 </mat-card>
