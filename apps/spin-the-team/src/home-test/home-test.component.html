@@ -1,5 +1,8 @@
 <div class="container">
-  <spin-the-team-spinner [team]="activeListService.activeList"/>
+  <div class="left_container">
+    <spin-the-team-spinner [team]="activeListService.activeList"/>
+    <spin-the-team-calendar/>
+  </div>
   <spin-the-team-participant-list-container/>
-  <spin-the-team-calendar/>
+
 </div>

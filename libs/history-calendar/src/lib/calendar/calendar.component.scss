@@ -1,5 +1,5 @@
 .example-card {
-  max-width: 400px;
+  //max-width: 400px;
 }
 
 .example-header-image {
@@ -7,14 +7,16 @@
   background-size: cover;
 }
 
-.example {
+.test{
   display: flex;
   flex-direction: row;
-  background: white;
-}
-
-.test{
-  width: 40%;
-  background: white;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 20px;
+  width: 50vw;
+  border-radius: 17px;
+  background-color: rgba(255, 255, 255, 0.3);
   overflow-x:auto;
+  direction: rtl;
+  box-sizing: border-box;
 }
