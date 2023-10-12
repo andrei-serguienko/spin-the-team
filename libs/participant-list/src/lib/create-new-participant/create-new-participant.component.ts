@@ -29,7 +29,7 @@ export class CreateNewParticipantComponent {
 
   public openDialog(): void {
     this.dialog.open(this.newParticipantDialog, {
-      width: '30%',
+      width: '40%',
     }).afterClosed().pipe(
       switchMap((data) =>
         this.userService.createUser (data)

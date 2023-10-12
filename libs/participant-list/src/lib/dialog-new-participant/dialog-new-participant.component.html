@@ -1,5 +1,5 @@
-<div>
-  <div class="title-2" mat-dialog-title>
+<div class="container">
+  <div class="title-2">
     <span>Create a new member</span>
   </div>
   <mat-form-field>
@@ -10,8 +10,9 @@
     <mat-label>Profile picture</mat-label>
     <input type="profile picture" matInput [formControl]="img_url" placeholder="Put image link">
   </mat-form-field>
+  <div>
+    <button mat-raised-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" (click)="submit()" [disabled]="!form.valid">Create</button>
+  </div>
 </div>
-<div>
-  <button mat-raised-button color="primary" (click)="submit()" [disabled]="!form.valid">Create</button>
-  <button mat-raised-button mat-dialog-close>Cancel</button>
-</div>
+
