@@ -1,11 +1,9 @@
-import { Route } from '@angular/router';
-import {CalendarComponent} from "../../../../libs/history-calendar/src/lib/calendar/calendar.component";
-import {HomeTestComponent} from "@spin-the-team/libs/participant-list";
+import {Route} from '@angular/router';
+import {HomeTestComponent} from "../home-test/home-test.component";
 
 export const appRoutes: Route[] = [
-  { path: 'history-calendar', component: CalendarComponent },
   {
-    path:'participant-list',
+    path:'',
     component: HomeTestComponent
   }
 ];
