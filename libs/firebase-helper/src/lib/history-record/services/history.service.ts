@@ -1,13 +1,7 @@
 import {Injectable} from '@angular/core';
 import {FirestoreUtils} from '../../common/firestore';
-import {map, Observable} from 'rxjs';
-import { HistoryRecordModel } from '@spin-the-team/models';
-import {Injectable} from '@angular/core';
-import {FirestoreUtils} from '../../common/firestore';
 import {map, Observable, of} from 'rxjs';
-import {HistoryRecordModel} from "@spin-the-team/models";
-import firebase from "firebase/compat";
-import Timestamp = firebase.firestore.Timestamp;
+import { HistoryRecordModel } from '@spin-the-team/models';
 
 @Injectable({
   providedIn: 'root'

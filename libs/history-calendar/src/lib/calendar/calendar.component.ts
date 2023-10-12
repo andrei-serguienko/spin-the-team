@@ -19,9 +19,12 @@ import {GetHistory} from "../../../../store/src/lib/actions/history.action";
 export class CalendarComponent implements OnInit {
   @Select(HistoryState.getHistory) historyList!: Observable<HistoryRecordModel[]>;
   private readonly store = inject(Store);
+  private test!:Observable<HistoryRecordModel[]>;
   public ngOnInit(): void {
     this.store.dispatch(new GetHistory()).subscribe();
     //this.historyList = this.store.select(HistoryState.getHistory);
+    this.test = this.store.select(HistoryState.getHistory);
     console.log(this.historyList);
+    console.log('t',this.test)
   }
 }
