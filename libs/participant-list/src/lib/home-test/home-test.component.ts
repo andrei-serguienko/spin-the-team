@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ParticipantListContainerComponent} from "../participant-list-container/participant-list-container.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'spin-the-team-home-test',

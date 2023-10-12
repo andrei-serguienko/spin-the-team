@@ -1,4 +1,12 @@
 <div class="container">
   <spin-the-team-participant-card/>
-<!--  <spin-the-team-participant-card/>-->
+  <hr>
+  <div *ngFor="let user of users$ | async">
+    <spin-the-team-paricpant-card
+      [name]="user.name"
+      [image]="user.img_url"
+    />
+  </div>
+<hr>
+  <spin-the-team-create-new-participant/>
 </div>

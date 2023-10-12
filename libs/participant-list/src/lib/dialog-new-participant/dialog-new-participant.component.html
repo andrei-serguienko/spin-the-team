@@ -1,0 +1,17 @@
+<div>
+  <div mat-dialog-title>
+    <span>Create a new member</span>
+  </div>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input type="email" matInput [formControl]="name" placeholder="Name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Profile picture</mat-label>
+    <input type="profile picture" matInput [formControl]="img_url" placeholder="Put image link">
+  </mat-form-field>
+</div>
+<div>
+  <button mat-raised-button color="primary">Create</button>
+  <button mat-raised-button>Cancel</button>
+</div>
