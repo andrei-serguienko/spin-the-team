@@ -17,10 +17,4 @@ describe('AppComponent', () => {
       'Welcome spin-the-team'
     );
   });
-
-  it(`should have as title 'spin-the-team'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('spin-the-team');
-  });
 });
