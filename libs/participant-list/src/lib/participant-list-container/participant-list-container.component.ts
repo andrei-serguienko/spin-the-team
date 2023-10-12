@@ -25,7 +25,8 @@ export class ParticipantListContainerComponent {
 
   public check(event: boolean | null, i: number, user: User): void {
     if (!event) {
-      this.activeListService.activeList.splice(i, 1);
+      const index = this.activeListService.activeList.findIndex((item) => item.name === user.name);
+      this.activeListService.activeList.splice(index, 1);
     } else {
       this.activeListService.activeList.push(user);
     }

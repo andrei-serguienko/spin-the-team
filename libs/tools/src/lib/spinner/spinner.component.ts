@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   trigger,
@@ -7,6 +7,7 @@ import {
   animate,
   keyframes,
 } from '@angular/animations';
+import { User } from '@spin-the-team/models';
 
 @Component({
   selector: 'spin-the-team-spinner',
@@ -29,31 +30,13 @@ import {
     ]),
   ],
 })
-export class SpinnerComponent implements OnInit {
-  public team: any[] = [];
+export class SpinnerComponent {
+  @Input() public team: User[] = [];
 
   winner: number | null = null;
 
-  ngOnInit(): void {
-    this.team.push(
-      'https://static.vecteezy.com/system/resources/thumbnails/002/534/006/small/social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg'
-    );
-    this.team.push(
-      'https://static.vecteezy.com/system/resources/thumbnails/002/534/006/small/social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg'
-    );
-    this.team.push(
-      'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
-    );
-    this.team.push(
-      'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
-    );
-    this.team.push(
-      'https://static.vecteezy.com/system/resources/thumbnails/002/534/006/small/social-media-chatting-online-blank-profile-picture-head-and-body-icon-people-standing-icon-grey-background-free-vector.jpg'
-    );
-    this.startSpinning();
-  }
-
   startSpinning() {
+    this.winner = null;
     let counter = 10; // initial delay
     const duration = 2_000; // spinner will run for 10 seconds
     const startTime = Date.now();
@@ -65,7 +48,7 @@ export class SpinnerComponent implements OnInit {
       // Modify the counter using the eased time value. This will slow down the spinning over time.
       counter = 10 + 90 * easedT; // this line can be adjusted based on desired behavior
 
-      this.team.push(this.team.shift());
+      this.team.push(this.team.shift() || {} as User);
 
       // Only call the next rotation if the spinner hasn't reached the end of its duration
       if (elapsed < duration) {

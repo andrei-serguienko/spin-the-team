@@ -4,6 +4,7 @@
     }"
     [class.hasWin]="hasWin(i)"
   >
-    <img [src]="member" alt="head"/>
+    <img [src]="member.img_url" alt="head"/>
   </div>
 </div>
+<div (click)="startSpinning()">Start the spin</div>
