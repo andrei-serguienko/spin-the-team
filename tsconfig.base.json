@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@spin-the-team/firebase-helper": ["libs/firebase-helper/src/index.ts"],
       "@spin-the-team/libs/participant-list": [
         "libs/participant-list/src/index.ts"
-      ],
-      "@spin-the-team/firebase-helper": ["libs/firebase-helper/src/index.ts"]
-    },
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
