@@ -5,3 +5,7 @@ export class CreateUser {
   constructor(public payload: User) {}
 
 }
+
+export class GetUsers {
+  static readonly type = '[User] Get Users';
+}

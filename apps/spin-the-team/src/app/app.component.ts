@@ -1,7 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { State, Store } from '@ngxs/store';
-import { CreateUser } from '../../../../libs/store/src/lib/actions/user.action';
 
 
 @Component({
@@ -12,13 +10,4 @@ import { CreateUser } from '../../../../libs/store/src/lib/actions/user.action';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  private readonly store = inject(Store);
-
-  public test(): void {
-    this.store.dispatch(new CreateUser({
-      name: 'toto',
-      img_url: 'toto.png'
-    }));
-
-  }
 }
