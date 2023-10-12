@@ -9,11 +9,13 @@ import {
 } from '@angular/animations';
 import { User } from '@spin-the-team/models';
 import {MatButtonModule} from "@angular/material/button";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatInputModule} from "@angular/material/input";
 
 @Component({
   selector: 'spin-the-team-spinner',
   standalone: true,
-  imports: [CommonModule, MatButtonModule],
+  imports: [CommonModule, MatButtonModule, MatDatepickerModule, MatInputModule],
   templateUrl: './spinner.component.html',
   styleUrls: ['./spinner.component.scss'],
   animations: [
