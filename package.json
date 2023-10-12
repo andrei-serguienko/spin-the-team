@@ -41,6 +41,7 @@
     "@angular/language-service": "~16.2.0",
     "@nestjs/schematics": "^10.0.1",
     "@nestjs/testing": "^10.0.2",
+    "@ngxs/devtools-plugin": "^3.8.1",
     "@nx/esbuild": "^16.10.0",
     "@nx/eslint-plugin": "16.10.0",
     "@nx/jest": "16.10.0",

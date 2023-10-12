@@ -1,14 +1,20 @@
-import { ApplicationConfig } from '@angular/core';
-import {
-  provideRouter,
-  withEnabledBlockingInitialNavigation,
-} from '@angular/router';
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { provideRouter, withEnabledBlockingInitialNavigation, } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { FirebaseUtils } from '@spin-the-team/firebase-helper';
+import { NgxsModule } from '@ngxs/store';
+import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { UserState } from '../../../../libs/store/src/lib/states/user.state';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(appRoutes, withEnabledBlockingInitialNavigation()), provideAnimations()],
+  providers: [
+    provideRouter(appRoutes, withEnabledBlockingInitialNavigation()),
+    provideAnimations(),
+    importProvidersFrom(
+      NgxsModule.forRoot([UserState]),
+      NgxsReduxDevtoolsPluginModule.forRoot(),
+      ),
+  ],
 };
 
 
