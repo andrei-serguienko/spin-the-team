@@ -1,0 +1,14 @@
+<div class="container">
+  <spin-the-team-participant-card/>
+  <hr>
+  <div *ngFor="let user of users$ | async; let i = index">
+    <spin-the-team-paricpant-card
+      [name]="user.name"
+      [image]="user.img_url"
+      (isCheck)="check($event, i, user)"
+    />
+  </div>
+<hr>
+  <spin-the-team-create-new-participant/>
+  <button (click)="save()">Save</button>
+</div>

@@ -1,5 +1,9 @@
 import {Injectable} from '@angular/core';
 import {FirestoreUtils} from '../../common/firestore';
+import {map, Observable} from 'rxjs';
+import { HistoryRecordModel } from '@spin-the-team/models';
+import {Injectable} from '@angular/core';
+import {FirestoreUtils} from '../../common/firestore';
 import {map, Observable, of} from 'rxjs';
 import {HistoryRecordModel} from "@spin-the-team/models";
 import firebase from "firebase/compat";
@@ -24,5 +28,23 @@ export class HistoryService {
     /*return FirestoreUtils.getAllDocsFromCollection('history').pipe(
       map((data: HistoryRecordModel[]) => data.sort((a, b) => a.start_date - b.start_date))
     );*/
+  }
+
+  public getCurrentUser(): Observable<HistoryRecordModel> {
+    return this.historyList().pipe(
+      map((list: HistoryRecordModel[]) => {
+        let maxEndDate = 0;
+        let currentIndex = -1;
+
+        list.forEach((data, index) => {
+          if (data.end_date > maxEndDate) {
+            currentIndex = index;
+            maxEndDate = data.end_date
+          }
+        })
+
+        return list[currentIndex];
+      })
+    )
   }
 }

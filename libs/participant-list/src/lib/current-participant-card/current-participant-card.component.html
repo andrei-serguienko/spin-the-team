@@ -1,0 +1,12 @@
+<mat-card class="background" *ngIf="currentUser$ | async as currentUser">
+  <div class="avatar-background">
+    <img [src]="currentUser.img_url">
+  </div>
+  <div class="container-info">
+    <span class="avatar-name">{{ currentUser.name }}</span>
+    <div>
+      <span class="">{{ currentUser.start_date | date }}</span> -
+      <span class="">{{ currentUser.end_date | date }}</span>
+    </div>
+  </div>
+</mat-card>
